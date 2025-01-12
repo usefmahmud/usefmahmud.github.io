@@ -49,7 +49,7 @@
 
     .container__about{
       max-width: 700px;
-      padding: 0 20px;
+      
       .about{
         text-align: center;
         line-height: 30px;
@@ -108,6 +108,12 @@
           background-color: var(--primary-color);
           color: var(--secondary-color);
         }
+      }
+    }
+
+    @media (max-width: 720px){
+      .container__about{
+        padding: 0 20px;
       }
     }
 
