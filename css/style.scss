@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --primary-color: #151515;
+  --secondary-color: #fbfcfc;
+
+  --link-hover: #0a2e5e;
+}
+
+.root{
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  align-items: center;
+
+  font-family: 'Source Sans 3';
+  background-color: var(--secondary-color);
+
+  .container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .container__title{
+      padding: 15px 0;
+
+      .title{
+        font-size: 36px;
+        font-weight: 600;
+      }
+    }
+
+    .container__about{
+      .about{
+        max-width: 700px;
+        text-align: center;
+        line-height: 30px;
+
+        margin-bottom: 10px;
+        font-size: 15px;
+
+        .about__link{
+          position: relative;
+          color: var(--primary-color);
+          font-weight: 700;
+          text-decoration: none;
+          font-style: italic;
+
+          &::after{
+            content: '';
+            position: absolute;
+            width: 95%;
+            height: 1px;
+            background-color: var(--primary-color);
+            bottom: 1px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+
+          &:hover{
+            color: var(--link-hover);
+
+            &::after{
+              background-color: var(--link-hover);
+            }
+          }
+        }
+      }
+    }
+
+    .container__toggle-theme{
+      padding: 10px 0;
+
+      .toggle-theme__button{
+        margin: 0 5px;
+        padding: 10px 25px;
+
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+        border: 1px solid var(--primary-color);
+
+        transition: background-color .1s;
+
+        cursor: pointer;
+
+        &.toggle-theme__button--active{
+          background-color: var(--primary-color);
+          color: var(--secondary-color);
+        }
+        
+        &:hover{
+          background-color: var(--primary-color);
+          color: var(--secondary-color);
+        }
+      }
+    }
+  }
+}
